@@ -1,14 +1,22 @@
 import { Router } from 'express';
 import { textChangeRangeIsUnchanged } from 'typescript';
+import ProductHandler from '../handlers/product.imple'
+import ProductService from '../../services/product.imple';
+import ProductEntity from '../../database/entities/product.imple';
 
 // https://stackoverflow.com/questions/72269530/typescript-class-with-express-mounted-route
 export default class ProductRouter {
 
     public router: Router
-    
+
     constructor(router: Router){
         this.router = router;
         this.productRoutes();
+
+        // init dependency inject here
+        
+        
+
     }
 
     protected productRoutes(): void {

@@ -4,8 +4,8 @@ import os from 'os';
 const numCPUs = os.cpus().length;
 
 async function bootstrapServer() {
-  if (cluster.isPrimary){
-    
+  if (cluster.isPrimary) {
+
     for (let i = 0; i < numCPUs; i++) {
       cluster.fork();
     }
