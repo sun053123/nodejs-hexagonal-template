@@ -1,7 +1,7 @@
 // create interface for class
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
 export interface IProductHandler {
-    getProducts(req: Request, res: Response): Promise<void | Error>
-    getProductById(req: Request, res: Response): Promise<void | Error>
+    getProducts(req: Request, res: Response, next: NextFunction): Promise<void | Error>
+    getProductById(req: Request, res: Response, next: NextFunction): Promise<void | Error>
 }

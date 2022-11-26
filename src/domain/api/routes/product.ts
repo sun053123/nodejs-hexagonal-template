@@ -1,3 +1,27 @@
+import { Router } from 'express';
+import { textChangeRangeIsUnchanged } from 'typescript';
+
+// https://stackoverflow.com/questions/72269530/typescript-class-with-express-mounted-route
+export default class ProductRouter {
+
+    public router: Router
+    
+    constructor(router: Router){
+        this.router = router;
+        this.productRoutes();
+    }
+
+    protected productRoutes(): void {
+        this.router.get('/')
+    }
+
+    
+}
+
+
+
+
+
 // sigleton pattern
 
 // import { Router } from 'express';

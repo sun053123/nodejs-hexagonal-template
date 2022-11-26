@@ -1,5 +1,4 @@
 import express, { Application, Request, Response, Router } from 'express';
-import 
 
 const app: Application = express();
 const router: Router = express.Router();
